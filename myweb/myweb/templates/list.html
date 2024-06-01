@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <table border="1">
+        <tr>
+            <th>Institution ID</th>
+            <th>User ID</th>
+            <th>Email</th>
+            <th>Creation Date</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.institutionID }}</td>
+            <td>{{ user.userID }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.created|date:"Y-m-d H:i" }}</td>  <!-- 格式化日期時間 -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

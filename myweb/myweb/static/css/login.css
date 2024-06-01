@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --color-success: #38ac7c;
+  --color-error: #ac3838;
+  --bggradient1-color:#f8f6f0;
+  --bggradient2-color:linear-gradient(0deg,#fcfbf7,#f8f6f0);
+  --test1-color: linear-gradient(0deg,#0fc7cd, #0fa3cd);
+  --test2-color: linear-gradient(0deg,#38ac7c,#0fc7cd);
+  --word-color: #212529;
+  --lightword-color:#fff;
+  --navword-color: rgb(39, 39, 39);
+  --inputbar-color:#f4f8f7;
+  --navbg-color: #9c9c9c;
+  --login-color:#c05c5c;
+  --register-color:#3f9870;
+  --login-orig-color:#c05c5c;
+  --login-hov-color:#f67474;
+  --login-act-color:#8a4141;
+  --register-orig-color:#3f9870;
+  --register-hov-color:#53c894;
+  --register-act-color:#20523c;
+  --navloginword-color: rgb(255, 255, 255);
+  --darkswitchword-color: rgb(53, 53, 53);
+  --containerbg-color:rgb(255, 255, 255);
+}
+@media(prefers-color-scheme: dark) {
+  :root{
+      --color-success: #38ac7c;
+      --color-error: #ac3838;
+      --bggradient1-color: #043c4c;
+      --bggradient2-color: linear-gradient(0deg,#314c41,#054b4d);
+      --word-color: #fff;
+      --lightword-color:#212529;
+      --navword-color: rgb(216, 216, 216);
+      --inputbar-color:#4f4f4f;
+      --navbg-color: #212529;
+      --login-color:#3ea3ac;
+      --register-color:#349b8d;
+      --login-orig-color:#3ea3ac;
+      --login-hov-color:#57e6f3;
+      --login-act-color:#235f65;
+      --register-orig-color:#349b8d;
+      --register-hov-color:#48dcc8;
+      --register-act-color:#1c5750;
+      --navloginword-color: rgb(216, 216, 216);
+      --darkswitchword-color: rgb(195, 195, 195);
+      --containerbg-color:rgb(53, 53, 53);
+  }
+}
+/*-----------------------------------#media query start-----------------------------------*/
+/*-----------------------------------#desktop-----------------------------------*/
+@media(max-width: 860px){
+  .desktopver{
+      display: none;
+  }
+}
+/*-----------------------------------#mobile-----------------------------------*/
+@media(min-width:860px){
+  .mobilever{
+    display: none;
+  }
+}
+
+
+/*-----------------------------------#media query end-----------------------------------*/
+
+body {
+  background:var(--bggradient1-color);
+  background-size: 100vh,100vw;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  border: 1px solid var(--lightword-color);
+  border-radius: 20px;
+  color:var(--lightword-color);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.register_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+}
+.register_input_group{
+  margin: 5px;
+}
+
+.register_input_group button {
+  width: 20%; /* 按钮宽度占满输入组 */
+}
+
+
+#register_input_group input[type="uname"]{
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 80%;
+}
+
+#register_input_group input[type="password"],
+#register_input_group input[type="text"] {
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="uname"],
+input[type="password"],
+input[type="text"] {
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 280px;
+}
+#register input[type="uname"]{
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+#loginm input[type="uname"],
+#loginm input[type="password"],
+#loginm input[type="text"]{
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 25vw;
+  min-width: 180px;
+}
+#forgotpassword input[type="uname"],
+#forgotpassword input[type="password"],
+#forgotpassword input[type="text"]{
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  width: 25vw;
+  min-width: 180px;
+}
+.submit-btn {
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+}
+
+#login .submit-btn{
+  background: var(--login-orig-color);
+  transition: 0.3s ease-in-out;
+}
+#loginm .submit-btn, #forgotpassword .submit-btn{
+  background: var(--login-orig-color);
+  text-decoration: none;
+}
+#loginm, #forgotpassword{
+  background:var(--containerbg-color);
+  position: relative;
+  text-align: center;
+  top: auto;
+}
+#loginm .button-sign-up{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  background: var(--login-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+#forgotpassword #verifyimg{
+  width: 200px;
+  height: 50px;
+}
+#forgotpassword .button-sign-up{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  background: var(--login-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+#loginm .button-sign-up:hover,  #forgotpassword .button-sign-up:hover{
+  background-color: var(--login-hov-color);
+  -webkit-transition:background 0.3s ease-in-out;
+-moz-transition:background 0.3s ease-in-out;
+transition:background-color 0.3s ease-in-out;
+}
+#loginm .button-sign-up:active,  #forgotpassword .button-sign-up:active{
+  background-color: var(--login-act-color);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#loginm .submit-btn{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 12px 35px;
+  text-transform: uppercase;
+  background: var(--login-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+#forgotpassword .submit-btn{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background: var(--login-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+#loginm .submit-btn:hover, #forgotpassword .submit-btn:hover{
+  background-color: var(--login-hov-color);
+  -webkit-transition:background 0.3s ease-in-out;
+-moz-transition:background 0.3s ease-in-out;
+transition:background-color 0.3s ease-in-out;
+}
+#loginm .submit-btn:active, #forgotpassword .submit-btn:active{
+  background-color: var(--login-act-color);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+#cover a{
+  transition: 0.3s ease-in-out;
+}
+#cover .button :hover, #login .submit-btn:hover, #loginm .submit-btn:hover,  #forgotpassword .submit-btn:hover{
+  background-color: var(--login-hov-color);
+transition:background-color 0.3s ease-in-out;
+}
+#cover a:active, #login .submit-btn:active, #loginm .submit-btn:active, #forgotpassword .submit-btn:active{
+  background-color: var(--login-act-color);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+#register .submit-btn {
+  background: var(--register-orig-color);
+  transition: 0.3s ease-in-out;
+}
+
+#cover a:hover, #register .submit-btn:hover{
+  background-color: var(--register-hov-color);
+  -webkit-transition:background 0.3s ease-in-out;
+-moz-transition:background 0.3s ease-in-out;
+transition:background-color 0.3s ease-in-out;
+}
+#cover a:active, #register .submit-btn:active{
+  background-color: var(--register-act-color);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.desktopver #container {
+  background: var(--containerbg-color);
+  border-radius: 20px;
+  height: 550px;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 80vw;
+  min-width: 800px;
+  max-width: 1000px;
+}
+.mobilever #container {
+  background: var(--containerbg-color);
+  border-radius: 20px;
+  height: 550px;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 90vw;
+}
+.findpassword{
+  background: var(--containerbg-color);
+  border-radius: 20px;
+  min-height: 550px;
+  height: 80vh;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 90vw;
+}
+
+#login{
+  background:var(--containerbg-color);
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -550px;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+#register {
+  background:var(--containerbg-color);
+  float: right;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  top: -550px;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+#login h1{
+  padding: 20% 0 25px;
+  color: var(--login-orig-color);
+}
+#register h1 {
+  padding: 6% 0 5px;
+  color: var(--register-orig-color);
+}
+#loginm h1 {
+  padding: 15vh 0 25px;
+  color: var(--login-orig-color);
+}
+#forgotpassword h1{
+  padding: 12vh 0 25px;
+  color: var(--login-orig-color);
+}
+
+
+#login p,
+#register p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding: 0px;
+}
+#loginm p, #forgotpassword p{
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding: 2px;
+}
+#inputerror{
+  color: red;
+}
+#forgot-pass {
+  border-bottom: 1px solid #ccc;
+  color:var(--word-color);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+#cover {
+  background: var(--login-orig-color);
+  color: var(--lightword-color);
+  height: 550px;
+  margin: 0 0 0 50%;
+  position: relative;
+  text-align: center;
+  transition: margin 0.7s, background 0.5s, display 1s, width 1s;
+  width: 50%;
+  z-index: 5;
+}
+
+#cover h1 {
+  color: var(--lightword-color);
+  padding-top: 38%;
+}
+
+#cover p {
+  font-weight: 300;
+  line-height: 22px;
+  padding: 30px 45px 40px;
+}
+
+.sign-in {
+  display: none;
+}
+
+.sub {
+  position: relative;
+  top: -11px;
+}
+
+#cover:target {
+  background: var(--register-orig-color);
+  margin: 0;
+}
+
+#cover:target .sign-up {
+  display: none; 
+}
+
+#cover:target .sign-in {
+  display: inline-block; 
+}
+
+#cover:target .login-div {
+  width: 35%;
+}
+
+#credit {
+  color: #999;
+  font-size: 14px;
+}
+
+#info {
+  background: #eaeaea;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+}
+/*-----------------------------------#registermobver-----------------------------------*/
+.registerpage #container{
+  background: var(--containerbg-color);
+  border-radius: 20px;
+  height: auto;
+  min-height: 600px;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 90vw;
+}
+.mbutton-log-in{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  background: var(--register-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.msubmit-btn{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  background: var(--register-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.mbutton-log-in:hover, .msubmit-btn:hover, #registerm button[type="button"]:hover, #register button[type="button"]:hover{
+  background-color: var(--register-hov-color);
+  -webkit-transition:background 0.3s ease-in-out;
+-moz-transition:background 0.3s ease-in-out;
+transition:background-color 0.3s ease-in-out;
+}
+.mbutton-log-in:active .msubmit-btn:active, #registerm button[type="button"]:active, #register button[type="button"]:active{
+  background-color: var(--register-act-color);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#registerm {
+  background:var(--containerbg-color);
+  position: relative;
+  text-align: center;
+  padding-bottom: -10px;
+}
+#registerm h1 {
+  padding: 5vh 0 25px;
+  color: var(--register-orig-color);
+}
+
+#registerm p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  padding: 10px;
+}
+
+#registerm input[type="password"],
+#registerm input[type="text"] {
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 25vw;
+  min-width: 200px;
+}
+#registerm input[type="uname"]{
+  background: var(--inputbar-color);
+  border: none;
+  font-weight: 300;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 16vw;
+  min-width: 120px;
+}
+#registerm button[type="button"]{
+  border: none;
+  border-radius: 25px;
+  color: var(--lightword-color);
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  padding: 9px 3px;
+  text-transform: uppercase;
+  background: var(--register-orig-color);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  width:7.5vw;
+  min-width: 70px;
+}
+#registerm #confirmpassword{
+  margin-bottom: 20px;
+}

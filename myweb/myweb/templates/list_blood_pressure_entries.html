@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Pressure Entries</title>
+</head>
+<body>
+    <h1>Blood Pressure Entries</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Subject</th>
+                <th>Systolic</th>
+                <th>Diastolic</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.user.username }}</td>
+                <td>{{ entry.subject }}</td>
+                <td>{{ entry.systolic }}</td>
+                <td>{{ entry.diastolic }}</td>
+                <td>{{ entry.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

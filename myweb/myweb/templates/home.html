@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歡迎來到我的網站</title>
+    <script>
+        function goToPage_enter_blood_pressure() {
+            window.location.href = "/enter_blood_pressure/";
+        }
+        function goTopPage_users() {
+            window.location.href = "/users/";
+        }
+        function goTopPage_list_blood_pressure_entries() {
+            window.location.href = "/list_blood_pressure_entries/";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>歡迎來到我的網站！</h1>
+    </header>
+    <section>
+        <p>這是一個簡單的網站歡迎頁面，您可以在這裡放置任何想要的內容。</p>
+        <img src="/static/images/welcome-image.jpg" alt="歡迎圖片" width="300">
+    </section>
+    <footer>
+        <p>感謝您的訪問！</p>
+        <button onclick="goToPage_enter_blood_pressure()">輸入血壓</button>
+        <button onclick="goTopPage_users()">所有註冊使用者</button>
+        <button onclick="goTopPage_list_blood_pressure_entries()">血壓輸入紀錄</button>
+        <br>
+        <div></div>
+        <a href="https://example.com">更多資訊</a>
+        <a href="/logout/">登出</a>
+    </footer>
+</body>
+</html>
