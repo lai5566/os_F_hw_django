@@ -37,13 +37,20 @@
             document.getElementById('overlay').style.display = 'none';
             document.getElementById('popupMessage').style.display = 'none';
         }
+
+        function goTopPage_login() {
+            window.location.href = "/login";
+        }
+    </script>
     </script>
 </head>
 <body onload="showPopupMessage()">
     <div id="overlay"></div>
     <div id="popupMessage">
         <h1>註冊完成</h1>
-        <p>您的帳號已成功註冊。</p>
+        <p>您的帳號已成功註冊，。</p>
     </div>
+    <h1>請等待權限開啟</h1>
+    <button onclick="goTopPage_login()">返回登入</button>
 </body>
 </html>

@@ -569,3 +569,15 @@ transition:background-color 0.3s ease-in-out;
 #registerm #confirmpassword{
   margin-bottom: 20px;
 }
+#mid {
+  display: none; /* Initially hidden; remove this line if you want it to be visible initially */
+  position: fixed; /* Fixed position relative to the viewport */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Shift the element itself to center it both horizontally and vertically */
+  padding: 20px; /* Padding around the content */
+  background: #fff; /* Background color */
+  border: 1px solid #ccc; /* Border around the element */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for a 3D effect */
+  z-index: 1000; /* Make sure it's above other elements */
+}
