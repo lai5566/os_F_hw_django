@@ -20,7 +20,7 @@ pip install venv
 ```
 建立虛擬環境
 ```bash
-python -m venv myenv
+python3 -m venv myenv
 ```
 進入虛擬環境
 ```bash
@@ -57,7 +57,7 @@ python manage.py createsuperuser
 ```
 ### 啟動
 ```python
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 ```
 
 
