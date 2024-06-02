@@ -1,6 +1,10 @@
 # os_F_hw_django
 操作系統，期末課堂作業，
-#安裝 Python
+安裝 Python
+<br>
+<br>
+[notion](https://glow-panama-957.notion.site/51-e1aabcfa3590443f90ff249f3fa057ed?pvs=4)
+<br>
 ## 修改進度
 ### ✅ 血壓輸入頁面 主題 蒐縮壓 舒張壓 
 ### ✅ 血壓歷史頁面 用哪個帳號輸入的 主題 蒐縮壓 舒張壓 時間戳
