@@ -9,13 +9,15 @@
 虛擬環境中運行 Django 專案。使用以下命令建立並啟動虛擬環境：
 
 ## 使用
-
+安裝虛擬環境
 ```bash
 pip install venv
 ```
+建立虛擬環境
 ```bash
 python -m venv myenv
 ```
+進入虛擬環境
 ```bash
 source myenv/bin/activate  # 對於 Windows 系統，使用 `env\Scripts\activate`
 ```
@@ -30,10 +32,11 @@ pip install django
 ### 遷移數據庫
 數據庫的遷移：
 
-
+進入專案資料夾
 ```bash
 cd /myweb/myweb
 ```
+開始遷移
 ```bash
 python manage.py makemigrations
 ```
