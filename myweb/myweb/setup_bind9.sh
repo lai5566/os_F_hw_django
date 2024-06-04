@@ -1,4 +1,4 @@
-bashCopy code
+
 #!/bin/bash
 
 # 檢查是否以 root 用戶運行
