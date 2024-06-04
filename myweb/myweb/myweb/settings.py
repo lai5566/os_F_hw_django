@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0:8000']
 
+# CSRF cookie only HTTPS #
+CSRF_COOKIE_SECURE = True
+SESSIONS_COOKIE_SECURE= True
+CSRF_TRUSTED_ORIGINS = ['https://example.com', 'https://sub.example.com']
+
 
 # Application definition
 
